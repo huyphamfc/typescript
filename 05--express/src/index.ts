@@ -1,6 +1,10 @@
 import express from 'express';
 
+import remindersRouter from './routers/reminders';
+
 const app = express();
+
+app.use('/api/reminders', remindersRouter);
 
 app.get('/api', (req, res) => {
   res.end('Hello from the server!');
